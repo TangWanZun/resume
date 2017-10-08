@@ -1,0 +1,193 @@
+*{
+	font-family: "幼圆";
+}
+body{
+	overflow:hidden;
+	/*position: relative;*/
+	height: 100vh;
+	width: 100vw;
+}
+.scoll{
+	transition: 1s ease;
+}
+
+/*侧边栏*/
+.fiexd-right{
+	position: fixed;
+	width: 20px;
+	height: 300px;
+	/*background-color: red;*/
+	z-index: 99;
+	right:30px;
+	top:calc( 50vh - 150px );
+}
+.fiexd-raiud{
+	margin-top:30px ;
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(0,0,0,0.5);
+	border-radius: 20px;	
+}
+.fiexd-raiud-in{
+	background-color: rgba(0,0,0,0.8);
+}
+/*第一页*/
+.mod{
+	width: 100vw;
+	height: 100vh;
+	/*background-color: red;*/
+}
+.back-box{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.back{
+	width:120vw;
+	height: 120vh;
+	position: absolute;
+	top: -10vh;
+	left: -10vw;
+	background-image:url(../img/timg.jpg);
+	background-size: 100%;
+	background-position: center; 
+	-webkit-filter: blur(5px);
+   	-moz-filter: blur(5px);
+    -ms-filter: blur(5px);    
+    filter: blur(5px);
+}
+.back-mo{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+.mod-center{
+	position: absolute;
+	width: 50vw;
+	height: 50vh;
+	/*background-color: red;*/
+	margin: 0 auto;
+	top:25vh;
+	left: 25vw;
+	background-image: url(../img/title_kuang.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: white;
+	line-height: 50vh;
+	font-family: "幼圆";
+	text-align: center;
+	font-size: 7.5vw;
+}
+/*第二页*/
+.mod2-center{
+	width: 1100px;
+	height: 100vh;
+	/*background-color: red;*/
+	margin: 0 auto;
+	padding-top: 15vh;
+}
+.mod2_float{
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*outline: solid;*/
+}
+.mod2_name{
+	width: 80%;
+	height: 20vh;
+	margin: 0 auto;
+	/*background-color: blue;*/
+	overflow: hidden;
+}
+.mod2_log{
+	height: 20vh;
+	width: 20vh;
+	background-image: url(../img/log.jpg);
+	background-size: 100%;
+	border-radius: 20vh;
+	float: left;
+}
+.mod2_myname{
+	float: left;
+	width: calc( 100% - 20vh );
+	height: 50%;
+	/*text-align: center;*/
+	line-height: 10vh;
+	color: black;
+	font-size: 5vh;
+	padding-left: 35px;
+}
+.mod2_zhiye{
+	float: left;
+	width: calc( 100% - 20vh );
+	height: 50%;
+}
+.mod2_zhiye_box{
+	width: 80%;
+	height: 9vh;
+	background-color: rgb(255,57,0);
+	border-radius: 10px;
+	color: white;
+	font-size: 30px;
+	line-height: 9vh;
+	text-align: center;
+	margin-left: 25px;
+}
+.mod2-beijing{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 10vh;
+}
+.mod2-title{
+	height: 12vh;
+	width: 100%;
+	border-bottom: 2px solid rgb(255,57,0);
+	border-left: 20px solid rgb(255,57,0);
+	position: relative;
+}
+.mod2-txt{
+	color: rgb(255,57,0);
+	font-size: 8vh;
+	text-indent: 20px;
+
+}
+.mod2-time{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: rgb(255,57,0);
+	font-size: 5vh;
+}
+.mod2-zhuanye{
+	font-size: 10vh;
+}
+.mod2-xuexiao{
+	font-size: 8vh;
+	text-align: right;
+}
+.mod2-lianxi{
+	margin-top:30px;
+	height: 10vh;
+	line-height: 10vh;
+	font-size: 5vh;
+}
+.mod2-lianxi-iso{
+	width: 10vh;
+	height: 10vh;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	float: left;
+	margin-right: 20px;
+}
+.iso1{
+	background-image: url(../img/lianxi1.png);
+}
+.iso2{
+	background-image: url(../img/lianxi2.png);
+}
+.iso3{
+	background-image: url(../img/lianxi3.png);
+	
+}
