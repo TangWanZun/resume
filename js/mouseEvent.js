@@ -1,4 +1,7 @@
 	var raiuds = document.getElementsByClassName("fiexd-raiud");
+	var INTO = false;
+	var time1 = 0;
+	var time2 = 0;
 	var SF = {
 		screenHeight:document.getElementsByClassName("mod")[0].scrollHeight,
 		IDscroll:document.getElementById("scroll"),
@@ -13,8 +16,11 @@
 			SF.translateY -= SF.screenHeight;
 			SF.IDscroll.style.transform = "translateY("+SF.translateY+"px)";
 		}
-	}
+	};
    var scrollFunc = function (e) {
+	   	if(INTO){
+	   		return;
+	   	}
         var direct = 0;  
         e = e || window.event; 
         if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
@@ -25,6 +31,11 @@
 				}
 				SF.onup();
 				SF.k--;
+				INTO = true;
+				time1 =setTimeout(function(){
+					INTO=false;
+					clearTimeout(time1);
+				},1000);
             }  
             if (e.wheelDelta < 0) { //当滑轮向下滚动时  
 //              alert("滑轮向下滚动1"); 
@@ -33,7 +44,11 @@
 				}
 				SF.ondown();
 				SF.k++;
-//				SF.IDscroll.style.transform = "translateY(-661px)";
+				INTO = true;
+				time2 = setTimeout(function() {
+					INTO = false;
+					clearTimeout(time2);
+				}, 1000);
             }  
 
         } else if (e.detail) {  //Firefox滑轮事件  

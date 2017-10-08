@@ -36,6 +36,7 @@ body{
 	width: 100vw;
 	height: 100vh;
 	/*background-color: red;*/
+	position: relative;
 }
 .back-box{
 	width: 100vw;
@@ -191,3 +192,59 @@ body{
 	background-image: url(../img/lianxi3.png);
 	
 }
+/*指尖飞机项目*/
+	/*手机*/
+.zjfj-iphone{
+	position: relative;
+}
+.zjfj-show{
+	position: absolute;	
+	top: 68px;
+	left: 18px;
+	width:224px;
+	height: 399px;
+}
+.pingmo{
+	position: absolute;	
+	top: 0px;
+	left:0px;
+	width:224px;
+	height: 399px;
+	background-image: url(../img/zjfj/pingmo.png);
+	background-size: 100% 100%;
+}
+.zjfj-sjmx{
+	position: absolute;
+	height: 259px;
+	width: 530px;
+	background-image: url(../img/zjfj/sjmx.png);
+	background-size: 100% 100%;
+	bottom: 0px;
+	left: 230px;
+	z-index: -1;
+}
+.zjfj-sjmx-commit{
+	position: absolute;
+	width: 404px;
+	height: 226px;
+	top: 17px;
+	left: 63px;
+	padding:10px;
+}
+.zjfj-sjmx-js{
+	font-size: 30px;
+}
+.zjfj-ul li{
+	display: block;
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+	width: 100px;
+	font-size: 25px;
+	text-align: center;
+}
+.zjfj-ul{
+	padding-left: 20px;
+	overflow: hidden;
+}
+
