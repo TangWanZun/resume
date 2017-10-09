@@ -37,6 +37,7 @@ body{
 	height: 100vh;
 	/*background-color: red;*/
 	position: relative;
+	overflow: hidden;
 }
 .back-box{
 	width: 100vw;
@@ -196,7 +197,9 @@ body{
 /*指尖飞机项目*/
 	/*手机*/
 .zjfj-iphone{
-	position: relative;
+	position: absolute;
+	left: 0px;
+	bottom: 20px;
 }
 .zjfj-show{
 	position: absolute;	
@@ -303,5 +306,51 @@ body{
 	height: 2px;
 	background-color: rgb(255, 57, 0);
 	z-index: -1;
+}
+/*音乐播放器v1*/
+.yyv1-connet{
+	position: absolute;
+	bottom: 20px;
+}
+.yyv1-dn{
+	/*background-image: url(../img/yybfqv1/diannao.png);
+	background-size: 100%;*/
+}
+.yyv1-dnmx{
+	position: absolute;
+	z-index: -1;
+	bottom: 0px;
+	left: 450px;
+	background-image: url(../img/yybfqv1/dnmx.png);
+	background-size: 100%;
+	width: 800px;
+	height: 465px;
+}
+.yyv1-sjmx-commit{
+	position: absolute;
+	width: 404px;
+	height: 226px;
+	top: 17px;
+	right: 120px;
+	padding:10px;
+}
+.yyv1-ul li{
+	display: block;
+	list-style: none;
+	float: left;
+	width: 95px;
+	font-size: 25px;
+	text-align: center;
+}
+.yyv1-ul{
+	padding-left: 0;
+	overflow: hidden;
+}
+.yyv1-title{
+	width: 400px;
+	left:calc( 50% - 200px );
+}
+.yyv1-title:before{
+	width: 600px;
 }
 

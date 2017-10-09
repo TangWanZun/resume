@@ -6,7 +6,7 @@
 		screenHeight:document.getElementsByClassName("mod")[0].scrollHeight,
 		IDscroll:document.getElementById("scroll"),
 		k:0,
-		allk:4,
+		allk:5,
 		translateY:0,
 		onup:function(){
 			SF.translateY += SF.screenHeight;
@@ -52,11 +52,29 @@
             }  
 
         } else if (e.detail) {  //Firefox滑轮事件  
-            if (e.detail> 0) { //当滑轮向上滚动时  
-                alert("滑轮向上滚动");  
+            if (e.detail> 0) { //当滑轮向下滚动时  
+            	if(SF.k == SF.allk - 1) {
+            		return;
+            	}
+            	SF.ondown();
+            	SF.k++;
+            	INTO = true;
+            	time2 = setTimeout(function() {
+            		INTO = false;
+            		clearTimeout(time2);
+            	}, 1000);
             }  
-            if (e.detail< 0) { //当滑轮向下滚动时  
-                alert("滑轮向下滚动");  
+            if (e.detail< 0) { //当滑轮向上滚动时  
+            	if(SF.k == 0) {
+            		return;
+            	}
+            	SF.onup();
+            	SF.k--;
+            	INTO = true;
+            	time1 = setTimeout(function() {
+            		INTO = false;
+            		clearTimeout(time1);
+            	}, 1000);
             }  
         } 
         for(var i = 0; i < SF.allk; i++) {
