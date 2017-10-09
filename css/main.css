@@ -87,6 +87,7 @@ body{
 	/*background-color: red;*/
 	margin: 0 auto;
 	padding-top: 15vh;
+	position: relative;
 }
 .mod2_float{
 	width: 50%;
@@ -246,5 +247,61 @@ body{
 .zjfj-ul{
 	padding-left: 20px;
 	overflow: hidden;
+}
+/*标题*/	
+.zjfj-github{
+	display: block;
+	position: absolute;
+	top: 15vh;
+	right: 0px;
+	width: 250px;
+	height: 60px;
+	border-top: 2px solid rgb(255, 57, 0);
+	border-right: 2px solid rgb(255, 57, 0);
+	border-left: 1px solid rgb(255, 57, 0);
+	border-bottom: 1px solid rgb(255, 57, 0);
+	font-size: 25px;
+	line-height: 60px;
+	text-align: center;
+	color: rgb(255, 57, 0);
+	border-radius: 10px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.zjfj-github:hover{
+	background-color: rgb(255, 57, 0);
+	color: white;
+	text-decoration: none;
+	cursor:pointer;
+}
+.zjfj-rwm{
+	position: absolute;
+	right: 0px;
+	bottom: 20px;
+}
+.zjfj-rwm{
+	text-align: center;
+	font-size: 20px;
+}
+.zjfj-title{
+	position: absolute;
+	width: 200px;
+	line-height: 50px;
+	height: 50px;
+	top: 5vh;
+	left:calc( 50% - 100px );
+	font-size: 50px;
+	color: rgb(255, 57, 0);
+	background-color: white;
+}
+.zjfj-title:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -100px;
+	width: 400px;
+	height: 2px;
+	background-color: rgb(255, 57, 0);
+	z-index: -1;
 }
 
