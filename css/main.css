@@ -353,4 +353,92 @@ body{
 .yyv1-title:before{
 	width: 600px;
 }
-
+/*在线音乐播放器v2*/
+.yybfqv2-img{
+	position: absolute;
+	bottom: 20px;
+	right: 0px;
+}
+.yybfqv2-dnmb{
+	width: 441px;
+	height: 333px;
+	position: absolute;
+	left: 20px;
+	top: calc( 50% - 166px );
+	background-image: url(../img/yybfqv2/dnmb.png);
+	background-size: 100% 100%;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+/*手机音乐播放器*/
+.sjyy-title{
+	width: 350px;
+	left:calc( 50% - 175px );
+}
+.sjyy-title:before{
+	width: 550px;
+}
+.sjyy-sj{
+	position: absolute;
+	bottom: 20px;
+	left:calc( 50% - 105px );
+}
+.sjyy-sj-show{
+	position: absolute;
+	top: 55px;
+	left: 14px;
+	width=183px;
+	 height=324px;
+}
+.sjyy-hsj{
+	position: absolute;
+	z-index: -1;
+	top: -20px;
+	left: 0px;
+}
+.sjyy-sjz{
+	position: absolute;
+	background-image: url(../img/zjfj/iphone.png);
+	width: 210px;
+	height: 430px;
+	background-size: 100% 100%;
+	top: 0px;
+	left:-200px;
+}
+.sjyy-sjz-show{
+	position: absolute;
+	top: 55px;
+    left: 14px;
+}
+.sjyy-mx{
+	width: 210px;
+	height: 430px;
+	background-image:url(../img/sjyy/sjmx.png);
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0px;
+	left: 200px;
+	padding-top: 45px;
+}
+.sjyy-sjmx-js{
+	font-size: 30px;
+	text-align: center;
+}
+.sjyy-ul li{
+	display: block;
+	list-style: none;
+	float: right;
+	width: 95px;
+	height: 110px;
+	font-size: 25px;
+	text-align: center;
+}
+.sjyy-ul{
+	padding-left: 0;
+	padding-right: 10px ;
+	overflow: hidden;
+}
+.sjyy-mx h3{
+	text-align: right;
+	padding-right: 20px;
+}
