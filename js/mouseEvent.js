@@ -6,7 +6,7 @@
 		screenHeight:document.getElementsByClassName("mod")[0].scrollHeight,
 		IDscroll:document.getElementById("scroll"),
 		k:0,
-		allk:6,
+		allk:8,
 		translateY:0,
 		onup:function(){
 			SF.translateY += SF.screenHeight;

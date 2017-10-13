@@ -19,7 +19,7 @@ body{
 	/*background-color: red;*/
 	z-index: 99;
 	right:30px;
-	top:calc( 50vh - 150px );
+	top:calc( 50vh - 200px );
 }
 .fiexd-raiud{
 	margin-top:30px ;
@@ -441,4 +441,107 @@ body{
 .sjyy-mx h3{
 	text-align: right;
 	padding-right: 20px;
+}
+/*烟台海洋生物导航*/
+.hysw-title{
+	width: 400px;
+	left:calc( 50% - 200px );
+}
+.hysw-title:before{
+	width: 600px;
+}
+.hysw-img{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+}
+.hysw-dnmb{
+	width: 624px;
+	height: 500px;
+	position: absolute;
+	left: 450px;
+	bottom: 20px;
+	background-image: url(../img/yybfqv2/dnmb.png);
+	background-size: 100% 100%;
+	padding-right: 25px;
+	padding-top: 25px;
+	z-index: -1;
+}
+.hysw-dnmb h3{
+	text-align: right;
+	padding-right: 10px;
+}
+.hysw-sjmx-js{
+	text-align: center;
+}
+.hysw-ul li{
+	float:right;
+}
+/*其他作品*/
+.qt-title{
+	width: 200px;
+	left:calc( 50% - 100px );
+}
+.qt-title:before{
+	width: 400px;
+}
+.qt-center{
+	width: 100%;
+	/*background-color: red;*/
+	padding-top: 50px;
+}
+.qt-icon{
+	float: left;
+	width: 25%;
+	height: 500px;
+	padding-top: 20px;
+	/*background-color: blue;*/
+}
+.qt-con{
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	padding-top: 8px;
+	border:1px solid rgba(0,0,0,0.5);
+	position: relative;
+	top: 0px;
+	background-color: white;
+	transition: 0.5s;
+}
+
+.qt-con:before{
+	content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    left: 8px;
+    bottom: 7px;
+    height: 50px;
+    /* background-color: red; */
+    z-index: -1;
+    box-shadow: 4px 3px 13px 6px;
+    transform: rotate(-4deg);
+}
+.qt-con:after{
+	content: "";
+	display: block;
+	position: absolute;
+    width: 50%;
+	right: 8px;
+	bottom: 7px;
+	height: 50px;
+	/*background-color: red;*/
+	z-index: -1;
+	box-shadow: -4px 3px 13px 6px;
+	transform: rotate(4deg);
+}
+.qt-con:hover{
+	top:-10px;
+}
+.qt-xian{
+	width: 95%;
+	height: 95%;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
 }
