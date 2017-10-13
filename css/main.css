@@ -90,6 +90,11 @@ body{
 	padding-top: 15vh;
 	position: relative;
 }
+@media only screen and (min-width: 1600px) {
+	.mod2-center{
+		width: 1500px;
+	}
+}
 .mod2_float{
 	width: 50%;
 	height: 100%;
