@@ -31,6 +31,11 @@ body{
 .fiexd-raiud-in{
 	background-color: rgba(0,0,0,0.8);
 }
+@media screen and (max-width:500px){
+ .fiexd-right{
+ 	display: none;
+ }
+}
 /*第一页*/
 .mod{
 	width: 100vw;
@@ -64,6 +69,7 @@ body{
 	height: 100%;
 	background-color: rgba(0,0,0,0.3);
 }
+
 .mod-center{
 	position: absolute;
 	width: 50vw;
@@ -80,6 +86,12 @@ body{
 	font-family: "幼圆";
 	text-align: center;
 	font-size: 7.5vw;
+}
+@media screen and (max-width:500px){
+ .back{
+   background-size:cover;
+   background-position: center;
+  }
 }
 /*第二页*/
 .mod2-center{
@@ -256,6 +268,7 @@ body{
 	padding-left: 20px;
 	overflow: hidden;
 }
+
 /*标题*/	
 .zjfj-github{
 	display: block;
@@ -312,6 +325,17 @@ body{
 	background-color: rgb(255, 57, 0);
 	z-index: -1;
 }
+@media only screen and (min-width: 1600px) {
+	.zjfj-iphone {
+		transform: scale(1.5) translateY(-100px);
+	}
+	.zjfj-github {
+		transform: scale(1.5);
+	}
+	.zjfj-rwm {
+		transform: scale(1.5) translateY(-100px);
+	}
+}
 /*音乐播放器v1*/
 .yyv1-connet{
 	position: absolute;
@@ -358,6 +382,11 @@ body{
 .yyv1-title:before{
 	width: 600px;
 }
+@media only screen and (min-width: 1600px) {
+	.yyv1-connet {
+		transform: scale(1.5) translateY(-100px);
+	}
+}
 /*在线音乐播放器v2*/
 .yybfqv2-img{
 	position: absolute;
@@ -374,6 +403,14 @@ body{
 	background-size: 100% 100%;
 	padding-left: 25px;
 	padding-top: 25px;
+}
+@media only screen and (min-width: 1600px) {
+	.yybfqv2-img {
+		transform: scale(1.5) translateY(-100px);
+	}
+	.yybfqv2-dnmb{
+		transform:scale(1.5);
+	}
 }
 /*手机音乐播放器*/
 .sjyy-title{
@@ -447,6 +484,11 @@ body{
 	text-align: right;
 	padding-right: 20px;
 }
+@media only screen and (min-width:1600px ) {
+	.sjyy-sj{
+		transform: scale(1.5) translateY(-100px);
+	}
+}
 /*烟台海洋生物导航*/
 .hysw-title{
 	width: 400px;
@@ -481,6 +523,14 @@ body{
 }
 .hysw-ul li{
 	float:right;
+}
+@media only screen and (min-width:1600px ) {
+	.hysw-img {
+		transform: scale(1.5) translate(100px,-100px);
+	}
+	.hysw-dnmb {
+		transform: scale(1.5) translate(100px,-100px);
+	}
 }
 /*其他作品*/
 .qt-title{

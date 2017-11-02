@@ -58,7 +58,7 @@
             	}
             	SF.ondown();
             	SF.k++;
-            	INTO = true;
+            	INTO = true; 
             	time2 = setTimeout(function() {
             		INTO = false;
             		clearTimeout(time2);
