@@ -8,13 +8,13 @@
 		k:0,
 		allk:8,
 		translateY:0,
-		onup:function(){
-			SF.translateY += SF.screenHeight;
-			SF.IDscroll.style.transform = "translateY("+SF.translateY+"px)";
-		},
-		ondown:function(){
-			SF.translateY -= SF.screenHeight;
-			SF.IDscroll.style.transform = "translateY("+SF.translateY+"px)";
+		onin:function(n){
+			SF.k = n;
+			SF.IDscroll.style.transform = "translateY("+(-n*SF.screenHeight)+"px)";
+			for(var i = 0; i < SF.allk; i++) {
+				raiuds[i].className = "fiexd-raiud";
+			}
+			raiuds[SF.k].classList.add("fiexd-raiud-in");
 		}
 	};
    var scrollFunc = function (e) {
@@ -25,12 +25,11 @@
         e = e || window.event; 
         if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
             if (e.wheelDelta > 0) { //当滑轮向上滚动时  
-//              alert("滑轮向上滚动1");
 				if(SF.k == 0) {
 					return;
 				}
-				SF.onup();
 				SF.k--;
+				SF.onin(SF.k);
 				INTO = true;
 				time1 =setTimeout(function(){
 					INTO=false;
@@ -38,12 +37,11 @@
 				},1000);
             }  
             if (e.wheelDelta < 0) { //当滑轮向下滚动时  
-//              alert("滑轮向下滚动1"); 
 				if(SF.k == SF.allk-1) {
 					return;
 				}
-				SF.ondown();
 				SF.k++;
+				SF.onin(SF.k);
 				INTO = true;
 				time2 = setTimeout(function() {
 					INTO = false;
@@ -56,8 +54,8 @@
             	if(SF.k == SF.allk - 1) {
             		return;
             	}
-            	SF.ondown();
             	SF.k++;
+				SF.onin(SF.k);
             	INTO = true; 
             	time2 = setTimeout(function() {
             		INTO = false;
@@ -68,8 +66,8 @@
             	if(SF.k == 0) {
             		return;
             	}
-            	SF.onup();
             	SF.k--;
+				SF.onin(SF.k);
             	INTO = true;
             	time1 = setTimeout(function() {
             		INTO = false;
@@ -77,15 +75,23 @@
             	}, 1000);
             }  
         } 
-        for(var i = 0; i < SF.allk; i++) {
-        	raiuds[i].className = "fiexd-raiud";
-        }
-        raiuds[SF.k].classList.add("fiexd-raiud-in");
+
     }  
     //给页面绑定滑轮滚动事件  
     if (document.addEventListener) {  
         document.addEventListener('DOMMouseScroll', scrollFunc, false);  
     }  
     //滚动滑轮触发scrollFunc方法  
-//  window.onmousewheel = document.onmousewheel = scrollFunc;  
     document.onmousewheel = scrollFunc; 
+	//给侧面添加按钮功能
+	var divarr = document.querySelectorAll(".fiexd-raiud");
+	for(var i = 0 ;i<divarr.length; i++){
+		(function(atme){
+			divarr[i].onclick = function(){SF.onin(atme);}
+		})(i);
+	}
+//	document.querySelectorAll(".fiexd-raiud").forEach(function(div,index){
+//		div.onclick = function(){
+//			SF.onin(index);
+//		}
+//	});
