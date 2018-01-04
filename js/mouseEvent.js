@@ -2,11 +2,12 @@
 	var INTO = false;
 	var time1 = 0;
 	var time2 = 0;
+	//竖向移动
 	var SF = {
 		screenHeight:document.getElementsByClassName("mod")[0].scrollHeight,
 		IDscroll:document.getElementById("scroll"),
 		k:0,
-		allk:8,
+		allk:4,
 		translateY:0,
 		onin:function(n){
 			SF.k = n;
@@ -17,6 +18,38 @@
 			raiuds[SF.k].classList.add("fiexd-raiud-in");
 		}
 	};
+	//横向移动
+	var HF = {
+		scrollWidth: document.querySelector(".mod").scrollWidth,
+		IDscroll: document.querySelector(".mod-box"),
+		k: 0,
+		allk: document.querySelectorAll(".mod-HF").length-1,
+		translateX: 0,
+		onin: function(n) {
+			HF.k = n;
+			HF.IDscroll.style.transform = "translateX(" + (-n * HF.scrollWidth) + "px)";
+//			for(var i = 0; i < HF.allk; i++) {
+//				raiuds[i].className = "fiexd-raiud";
+//			}
+//			raiuds[HF.k].classList.add("fiexd-raiud-in");
+		}
+	};
+	function HFShow(index){
+		switch(index){
+			case 0:{
+				if(HF.k<=0){HF.k = HF.allk}
+				HF.k--;
+				HF.onin(HF.k);
+				break;
+			}
+			case 1:{
+				if(HF.k >= HF.allk-1) {HF.k = -1}
+				HF.k++;
+				HF.onin(HF.k);
+				break;
+			}
+		}
+	}
    var scrollFunc = function (e) {
 	   	if(INTO){
 	   		return;

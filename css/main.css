@@ -601,3 +601,49 @@ body{
 	background-color: rgba(0,0,0,0.5);
 	overflow: hidden;
 }
+/*我的作品横向幻灯片*/
+.production{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+.production-last,.production-next{
+	z-index: 9999;
+	position: absolute;
+	height: 30vh;
+	width: 5vw;
+	margin-top: -15vh;
+	top: 50%;
+	background-color:rgba(0,0,0,0.5);
+	line-height: 30vh;
+	color: white;
+	font-size: 10vh;
+	text-align: center;
+	-webkit-user-select: none;
+	/* Chrome all / Safari all */
+	-moz-user-select: none;
+	/* Firefox all */
+	-ms-user-select: none;
+	/* IE 10+ */
+}
+.production-last:hover,.production-next:hover{
+	background-color: rgba(0,0,0,0.3);
+	color: rgba(255,255,255,0.5);
+}
+.production-last{
+	border-radius: 0 1vw 1vw 0;
+	left: 0px;
+}
+.production-next{
+	border-radius:1vw 0 0 1vw;
+	right: 0px;
+}
+.mod-box{
+	width: 1000vw;
+	height: 100vh;
+	transition: 1s ease;
+	/*overflow: hidden;*/
+}
+.mod-HF{
+	float: left;
+}
