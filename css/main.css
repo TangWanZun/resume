@@ -424,7 +424,7 @@ body{
 .sjyy-sj{
 	position: absolute;
 	bottom: 20px;
-	left:calc( 50% - 105px );
+	left: calc( 50% - 400px );
 }
 .sjyy-sj-show{
 	position: absolute;
@@ -489,6 +489,13 @@ body{
 	.sjyy-sj{
 		transform: scale(1.5) translateY(-100px);
 	}
+}
+.sjyy-lianjie{
+	width:25vw;
+	height:100%;
+	position: absolute;
+	top:0px;
+	right: 0px;
 }
 /*烟台海洋生物导航*/
 .hysw-title{

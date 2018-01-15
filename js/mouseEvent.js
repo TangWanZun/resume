@@ -16,6 +16,14 @@
 				raiuds[i].className = "fiexd-raiud";
 			}
 			raiuds[SF.k].classList.add("fiexd-raiud-in");
+			
+			if(document.querySelector(".fiexd-right").style.display == "none"){
+				document.querySelector(".fiexd-right").style.display = "block";
+			};
+			//当处于产品演示页面时，隐藏侧边按钮栏
+			if(SF.k == 2) {
+				document.querySelector(".fiexd-right").style.display = "none";
+			}
 		}
 	};
 	//横向移动
@@ -28,10 +36,6 @@
 		onin: function(n) {
 			HF.k = n;
 			HF.IDscroll.style.transform = "translateX(" + (-n * HF.scrollWidth) + "px)";
-//			for(var i = 0; i < HF.allk; i++) {
-//				raiuds[i].className = "fiexd-raiud";
-//			}
-//			raiuds[HF.k].classList.add("fiexd-raiud-in");
 		}
 	};
 	function HFShow(index){
@@ -80,7 +84,7 @@
 					INTO = false;
 					clearTimeout(time2);
 				}, 1000);
-            }  
+           } 
 
         } else if (e.detail) {  //Firefox滑轮事件  
             if (e.detail> 0) { //当滑轮向下滚动时  
@@ -108,7 +112,6 @@
             	}, 1000);
             }  
         } 
-
     }  
     //给页面绑定滑轮滚动事件  
     if (document.addEventListener) {  
